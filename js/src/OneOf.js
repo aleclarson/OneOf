@@ -10,6 +10,10 @@ inArray = require("in-array");
 
 module.exports = Validator.Type("OneOf", {
   init: function(name, values) {
+    if (arguments.length === 1) {
+      values = name;
+      name = "";
+    }
     assertType(name, String);
     assertType(values, Array);
     this.name = name;
@@ -19,10 +23,12 @@ module.exports = Validator.Type("OneOf", {
     return inArray(this.values, value);
   },
   assert: function(value, key) {
+    var reason;
     if (inArray(this.values, value)) {
       return;
     }
-    return wrongType(this, key);
+    reason = key ? "'" + key + "' has an invalid value!" : "Expected another value!";
+    throw TypeError(reason);
   }
 });
 
