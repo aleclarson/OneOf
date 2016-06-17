@@ -27,8 +27,12 @@ module.exports = Validator.Type("OneOf", {
     if (inArray(this.values, value)) {
       return;
     }
-    reason = key ? "'" + key + "' has an invalid value!" : "Expected another value!";
-    throw TypeError(reason);
+    if (value === void 0) {
+      reason = key ? "'" + key + "' must be defined!" : "Expected a defined value!";
+    } else {
+      reason = key ? "'" + key + "' has an invalid value!" : "Invalid value detected!";
+    }
+    return TypeError(reason);
   }
 });
 

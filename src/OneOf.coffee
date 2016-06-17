@@ -22,6 +22,17 @@ module.exports = Validator.Type "OneOf",
     inArray @values, value
 
   assert: (value, key) ->
+
     return if inArray @values, value
-    reason = if key then "'#{key}' has an invalid value!" else "Expected another value!"
-    throw TypeError reason
+
+    if value is undefined
+      reason =
+        if key then "'#{key}' must be defined!"
+        else "Expected a defined value!"
+
+    else
+      reason =
+        if key then "'#{key}' has an invalid value!"
+        else "Invalid value detected!"
+
+    return TypeError reason
