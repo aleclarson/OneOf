@@ -16,6 +16,7 @@ module.exports = Validator.Type "OneOf",
     assertType values, Array
 
     @name = name
+    @getName = -> name
     @values = values
 
   test: (value) ->

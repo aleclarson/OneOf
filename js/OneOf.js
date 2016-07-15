@@ -17,6 +17,9 @@ module.exports = Validator.Type("OneOf", {
     assertType(name, String);
     assertType(values, Array);
     this.name = name;
+    this.getName = function() {
+      return name;
+    };
     return this.values = values;
   },
   test: function(value) {
