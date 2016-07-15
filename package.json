@@ -1,7 +1,7 @@
 {
   "name": "OneOf",
   "version": "1.0.0",
-  "main": "js/src/OneOf",
+  "main": "js/OneOf",
   "dependencies": {
     "in-array": "aleclarson/in-array#1.0.0",
     "Validator": "aleclarson/Validator#1.0.0",

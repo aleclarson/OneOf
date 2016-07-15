@@ -36,4 +36,4 @@ module.exports = Validator.Type("OneOf", {
   }
 });
 
-//# sourceMappingURL=../../map/src/OneOf.map
+//# sourceMappingURL=map/OneOf.map
