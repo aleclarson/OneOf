@@ -4,7 +4,7 @@
   "main": "js/OneOf",
   "dependencies": {
     "Validator": "aleclarson/Validator#1.1.0",
-    "assertType": "aleclarson/assertType#1.0.0",
+    "assertType": "aleclarson/assertType#2.0.0",
     "in-array": "aleclarson/in-array#1.0.0",
     "wrongType": "aleclarson/wrongType#1.0.0"
   },
