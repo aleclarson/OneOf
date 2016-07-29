@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "js/OneOf",
   "dependencies": {
-    "in-array": "aleclarson/in-array#1.0.0",
-    "Validator": "aleclarson/Validator#1.0.0",
+    "Validator": "aleclarson/Validator#1.1.0",
     "assertType": "aleclarson/assertType#1.0.0",
+    "in-array": "aleclarson/in-array#1.0.0",
     "wrongType": "aleclarson/wrongType#1.0.0"
   },
   "lotus": {
