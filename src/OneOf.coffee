@@ -3,6 +3,7 @@ assertType = require "assertType"
 Validator = require "Validator"
 wrongType = require "wrongType"
 inArray = require "in-array"
+isType = require "isType"
 
 module.exports = Validator.Type "OneOf",
 
@@ -12,12 +13,16 @@ module.exports = Validator.Type "OneOf",
       values = name
       name = ""
 
+    if isType values, String
+      values = values.split " "
+
     assertType name, String
     assertType values, Array
 
     @name = name
     @getName = -> name
     @values = values
+    return
 
   test: (value) ->
     inArray @values, value
