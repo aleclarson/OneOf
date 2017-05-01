@@ -9,18 +9,18 @@ module.exports = Validator.Type "OneOf",
 
   init: (name, values) ->
 
-    if arguments.length is 1
+    if values is undefined
       values = name
-      name = ""
+      name = null
 
     if isType values, String
       values = values.split " "
 
-    assertType name, String
-    assertType values, Array
+    if name
+      assertType name, String
+      @displayName = name
 
-    @name = name
-    @getName = -> name
+    assertType values, Array
     @values = values
     return
 

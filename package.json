@@ -1,6 +1,6 @@
 {
   "name": "OneOf",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "js/OneOf",
   "plugins": [
     "lotus-coffee"
@@ -10,10 +10,10 @@
     "postinstall": "npm run build"
   },
   "dependencies": {
-    "Validator": "aleclarson/Validator#1.1.1",
-    "assertType": "aleclarson/assertType#2.0.1",
+    "Validator": "aleclarson/Validator#1.2.0",
+    "assertType": "aleclarson/assertType#2.0.2",
     "in-array": "aleclarson/in-array#1.0.0",
-    "isType": "aleclarson/isType#1.0.1",
-    "wrongType": "aleclarson/wrongType#1.0.0"
+    "isType": "aleclarson/isType#1.0.2",
+    "wrongType": "aleclarson/wrongType#1.0.1"
   }
 }
